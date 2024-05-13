@@ -45,12 +45,9 @@ const options = {
         message: 'Please choose a date in the future',
       });
       refs.startBtn.disabled = true;
-      refs.startBtn.style.backgroundColor = '#cfcfcf';
-      refs.startBtn.style.color = '#989898';
+   
     } else {
       refs.startBtn.disabled = false;
-      refs.startBtn.style.backgroundColor = '#4e75ff';
-      refs.startBtn.style.color = '#fff';
     }
   },
 };
@@ -61,8 +58,6 @@ refs.startBtn.addEventListener('click', () => {
   if (!userSelectedDate) return;
 
   refs.dateTimePicker.disabled = true;
-  refs.startBtn.style.backgroundColor = '#cfcfcf';
-  refs.startBtn.style.color = '#989898';
   refs.dateTimePicker.disabled = true;
   const timerInterval = setInterval(() => {
     const currentDate = new Date();
@@ -74,8 +69,6 @@ refs.startBtn.addEventListener('click', () => {
         message: 'Timer stoped',
       });
       refs.startBtn.disabled = false;
-      refs.startBtn.style.backgroundColor = '#4e75ff';
-      refs.startBtn.style.color = '#fff';
       refs.dateTimePicker.disabled = true;
       return;
     }
